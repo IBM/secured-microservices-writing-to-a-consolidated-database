@@ -1,0 +1,7 @@
+node_modules
+.idea
+wrapped_sym.key
+sym_keyfile.key
+.env
+.log
+.DS_Store

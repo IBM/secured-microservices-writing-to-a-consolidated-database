@@ -1,0 +1,23 @@
+<h1>Team Admin</h1>
+<p>Create (or switch) teams and DEKs</p>
+<form method="post" action="/dek-admin">
+  {{#if dekExists }}
+    <button type="submit" class="btn btn-primary" disabled>Create team
+(and DEK)</button>
+    <button type="submit" class="btn btn-danger" id="deleteDek"
+name="action" value="delete">Delete team (and DEK)</button>
+  {{else}}
+    <button type="submit" class="btn btn-primary">Create team (and DEK)</button>
+    <button type="submit" class="btn btn-danger" id="deleteDek"
+name="action" value="delete" disabled>Delete team (and DEK)</button>
+  {{/if}}
+</form>
+<div style="margin-top:25px;">
+{{#if errorMsg}}
+  <p><alert class="alert alert-warning" role="alert">{{errorMsg}}</alert> </p>
+{{/if}}
+{{#if successMsg}}
+  <p><alert class="alert alert-success" role="alert">{{successMsg}}</alert> </p>
+  <code>{{dek}}</code>
+{{/if}}
+</div>

@@ -1,0 +1,82 @@
+<h1>Shared Database</h1>
+<h2>Customer Details</h2>
+<p>Click on a row to decrypt SPI</p>
+
+<table id="entriesTable" class="table table-striped table-sm table-hover" style="width:100%">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Phone #</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tableData}}
+            <tr id={{this._id}}>
+                <td>{{this.name}}</td>
+                <td>{{this.dob}}</td>
+                <td>{{this.gender}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.email}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+<br>
+<form method="get" action="/entries"  style="display: inline-block">
+    <button class="btn btn-primary" id="encryptedTableButton" >Refresh Details</button>
+</form>
+<form method="post" action="/entries" style="display: inline-block">
+    <button class="btn btn-primary" id="encryptedTableButton" onclick="deleteTable()">Clear Details</button>
+</form>
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <table id="clearTextTable" class="table table-sm" style="width:100%">
+            <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Phone #</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <alert class="alert alert-warning" role="alert" id="modalAlert"></alert>
+
+<div id="myModal" class="modal"  >
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document" >
+        <div class="modal-content" style="width:100%" >
+            <div class="modal-header" >
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" >
+                <table id="clearTextTable" class="table table-sm" style="width:100%">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Phone #</th>
+                        <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="javascripts/openModal.js"></script>
+

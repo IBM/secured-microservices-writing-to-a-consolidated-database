@@ -1,0 +1,21 @@
+# React files
+react-client/public/javascripts/*
+react-client/*
+
+# Libraries we import
+node_modules
+react-client/node_modules
+
+# Build outputs
+.nyc_output
+coverage
+docs
+tap_results
+views
+test/unit_tests/docker
+test/unit_tests/kubernetes
+static
+repo_defs
+public
+conf
+bin
