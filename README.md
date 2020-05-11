@@ -2,7 +2,7 @@
 
 A common pattern in microservice architectures, a single data layer, necessitates that teams or services with access to this  being able to read and write to it. If this data layer consists of a single database, you might want to restrict access on a per-team basis, by doing per-field encryption within the database. Then, only a given team with their own key, can read their data.
 
-This Code Pattern is a node.js application that allows for the creation of keys, one for each "team" or "service. It uses that key to encrypt some customer data, ahead of being stored in the database. In this way, it demontrates the above example, while showing how to use the [Key Protect RESTful API][key-protect-api] provided by an instance of IBM Cloud Hyper Protect Crypto Services. IBM Cloud Hyper Protect DBaaS for MongoDB is used as the database as it provides a standard MongoDB managed service, encrypted to anyone outside of he organisation with legitimate access to it. The application runs in a Docker container, for example on a Mac or Linux laptop, or following the directions below, on IBM Cloud Hyper Protect Virtual Servers, for runtime protection in the public cloud.
+This Code Pattern is a node.js application that allows for the creation of keys, one for each "team" or "service. It uses that key to encrypt some customer data, ahead of being stored in the database. In this way, it demonstrates the above example, while showing how to use the [Key Protect RESTful API][key-protect-api] provided by an instance of IBM Cloud Hyper Protect Crypto Services. IBM Cloud Hyper Protect DBaaS for MongoDB is used as the database as it provides a standard MongoDB managed service, encrypted to anyone outside of the organisation with legitimate access to it. The application runs in a Docker container, for example on a Mac or Linux laptop, or following the directions below, on IBM Cloud Hyper Protect Virtual Servers, for runtime protection in the public cloud.
 
 When you have completed this code pattern, you will understand how to:
 
@@ -38,7 +38,7 @@ If you just want to run this application locally (in a Docker container) you don
 
 Clone or download this repo, and change into its directory.
 
-You'l need an IBM Cloud IAM API key, so create one:
+You'll need an IBM Cloud IAM API key, so create one:
 
 ```bash
 ibmcloud login
