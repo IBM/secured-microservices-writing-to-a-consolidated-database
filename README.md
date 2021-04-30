@@ -58,6 +58,7 @@ First, let's start off by accessing the HPVS instance itself, via SSH protocol.
 Locate the Public IP address of the Virtual Server, which can be found in the Cloud Dashboard under _Resource Summary_. An option named _Services_ will be present, click on that button, and search for the Virtual Server on the list. Once the HPVS instance is located within the _Resource List_, click on the recently provisioned Virtual Server, and the HPVS Overview page should propagate. The _Connect_ section contains the HPVS public IP address, which is needed for the next set of steps.
 
 Open up a terminal window, and type in the following command. Note: substitute {Public_IP} with the public IP address obtained from the prior paragraph. 
+**Note:** The SSH key used to  provision the HPVS instance must be used in order to successfully access the Virtual Server. If multiple SSH keys exist in the .ssh/ directory, please use the ssh-i argument, and point towards the key used when deploying HPVS.
 
 ```bash
 ssh root@{Public_IP}
