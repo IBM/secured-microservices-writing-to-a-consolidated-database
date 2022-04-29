@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "aes256": "^1.0.4",
-    "async": "^2.6.1",
+    "async": "^2.6.4",
     "asynch": "^0.5.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
